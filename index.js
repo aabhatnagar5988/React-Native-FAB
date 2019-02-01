@@ -63,7 +63,7 @@ export default class FAB extends Component {
     iconTextComponent: PropTypes.element,
     visible: PropTypes.bool,
     snackOffset: PropTypes.number,
-    style: PropTypes.shape,
+    style: PropTypes.any,
   };
 
   static defaultProps = {
@@ -186,12 +186,11 @@ export default class FAB extends Component {
                   { scaleX: translateValue },
                   { rotate: rotateInterpolate },
                 ],
-                fontSize: 24,
+                
               }}
             >
               {React.cloneElement(iconTextComponent, { style: {
-                fontSize: 24,
-                color: iconTextColor,
+                
               } })}
             </Animated.View>
           </Touchable>
